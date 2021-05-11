@@ -12,7 +12,6 @@ mongoose.connect('mongodb://localhost/firstmongo')
 app.use("/", express.static(path.resolve(__dirname, 'Assets')))
 app.use(bodyParser())
 
-
 app.post('/api/create', async(req,res)=>{
     const record = req.body
     console.log(req.body)
@@ -22,5 +21,5 @@ app.post('/api/create', async(req,res)=>{
 })
 
 app.listen(port,() => {
-    console.log('server is running on port : ' , port)
+    console.log('server is running on port: ' , port)
 })
